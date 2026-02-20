@@ -70,3 +70,32 @@ elif op == "/":
         print("Error: Cannot divide by zero!")
 else:
     print("Invalid Operator")
+    
+    
+for a in range(1, 11):
+    print(a)
+    
+i = 1
+
+while i <= 10:
+    print(i)
+    i += 1
+    
+n = int(input("enter the number:"))
+
+total = 0
+for i in range(1,n + 1):
+    total += i
+    
+print("sum is:",total)    
+
+for i in range(2, 50, 2):
+    print(i)    
+    
+i = 2
+while i <= 50:
+    print(i)
+    i += 2
+
+        
+        
