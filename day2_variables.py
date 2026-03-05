@@ -39,3 +39,4 @@ goal = "AI Engineer"
 print("My name is", name)
 print("I am", age, "years old")
 print("My goal is to become an", goal)
+print("GitHub contribution test")
