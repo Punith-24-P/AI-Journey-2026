@@ -32,3 +32,10 @@ country = "india"
 print("name:",name)
 print("goal:",goal)
 print("country:",country)
+name = "Punith"
+age = 20
+goal = "AI Engineer"
+
+print("My name is", name)
+print("I am", age, "years old")
+print("My goal is to become an", goal)
