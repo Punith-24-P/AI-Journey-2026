@@ -67,3 +67,55 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    import random
+
+def play_game():
+    number = random.randint(1, 100)
+    attempts = 0
+
+    print("\nGuess a number between 1 and 100!")
+
+    while True:
+        guess = int(input("Enter your guess: "))
+        attempts += 1
+
+        if guess < number:
+            print("Too low!")
+        elif guess > number:
+            print("Too high!")
+        else:
+            print(f"Correct! You guessed it in {attempts} attempts.")
+            return attempts
+
+
+def main():
+    best_score = None
+
+    while True:
+        print("\n===== Number Guessing Game =====")
+        print("1. Play Game")
+        print("2. View Best Score")
+        print("3. Exit")
+
+        choice = input("Enter choice: ")
+
+        if choice == '1':
+            score = play_game()
+            if best_score is None or score < best_score:
+                best_score = score
+                print("🎉 New Best Score!")
+        elif choice == '2':
+            if best_score:
+                print(f"Best Score: {best_score} attempts")
+            else:
+                print("No games played yet.")
+        elif choice == '3':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice!")
+
+
+if __name__ == "__main__":
+    main()
