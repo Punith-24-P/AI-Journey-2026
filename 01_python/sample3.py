@@ -246,3 +246,60 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def run_quiz():
+    questions = [
+        {
+            "question": "What is the capital of India?",
+            "options": ["A. Mumbai", "B. Delhi", "C. Chennai", "D. Kolkata"],
+            "answer": "B"
+        },
+        {
+            "question": "Which language is used for web apps?",
+            "options": ["A. Python", "B. Java", "C. JavaScript", "D. All"],
+            "answer": "D"
+        },
+        {
+            "question": "Who developed Python?",
+            "options": ["A. Elon Musk", "B. Guido van Rossum", "C. Bill Gates", "D. Mark Zuckerberg"],
+            "answer": "B"
+        }
+    ]
+
+    score = 0
+
+    for q in questions:
+        print("\n" + q["question"])
+        for option in q["options"]:
+            print(option)
+
+        answer = input("Enter your answer (A/B/C/D): ").upper()
+
+        if answer == q["answer"]:
+            print("Correct!")
+            score += 1
+        else:
+            print(f"Wrong! Correct answer is {q['answer']}")
+
+    print(f"\nYour final score: {score}/{len(questions)}")
+
+
+def main():
+    while True:
+        print("\n===== Quiz App =====")
+        print("1. Start Quiz")
+        print("2. Exit")
+
+        choice = input("Enter choice: ")
+
+        if choice == '1':
+            run_quiz()
+        elif choice == '2':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice!")
+
+
+if __name__ == "__main__":
+    main() 
